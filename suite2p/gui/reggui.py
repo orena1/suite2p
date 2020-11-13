@@ -981,7 +981,8 @@ class PCViewer(QtGui.QMainWindow):
                 self.tPC = np.zeros((1,self.PC.shape[1]))
             good = True
         except Exception as e:
-            print("ERROR: ops.npy incorrect / missing ops['regPC'] and ops['regDX']")
+            print("ERROR: ops.npy incorrect / missing ops['regPC'] and ops['regDX'] "
+                 "(note: regPC is not calcualte if nframes<1500)")
             print(e)
             good = False
         if good:
