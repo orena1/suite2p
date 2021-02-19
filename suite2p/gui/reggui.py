@@ -1087,13 +1087,13 @@ class PCViewer(QtGui.QMainWindow):
                 self.pause()
                 ipc = int(self.PCedit.text())
                 ipc = max(ipc-1, 1)
-                self.PCedit.setText(str(ipc))
+                self.PCedit.setValue(ipc)
                 self.plot_frame()
             elif event.key() == QtCore.Qt.Key_Right:
                 self.pause()
                 ipc = int(self.PCedit.text())
                 ipc = min(ipc+1, self.nPCs)
-                self.PCedit.setText(str(ipc))
+                self.PCedit.setValue(ipc)
                 self.plot_frame()
             elif event.key() == QtCore.Qt.Key_Space:
                 if self.playButton.isEnabled():
